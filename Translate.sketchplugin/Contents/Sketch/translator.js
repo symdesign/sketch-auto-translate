@@ -316,12 +316,10 @@ Translator.prototype.translateDocument = function (context) {
     if (languageIndex == null) {return}
     var toLanguage = this.languageCodes[languageIndex];
     
-    for ( var j = 0; j < pages.length; j++ ) {
+    for ( var n = 0; n < pages.length; n++ ) {
 
-        var thisPage  = pages[j];
+        var thisPage  = pages[n];
         var artboards = [thisPage artboards];
-
-        log(pages[j])
 
         [doc setCurrentPage:thisPage];
         
@@ -341,7 +339,7 @@ Translator.prototype.translateDocument = function (context) {
                 translateOverridesInSelection( symbolInstances[j], toLanguage );
             }
     
-            var textLayers      = selectLayersOfTypeInContainer(context.document, "MSTextLayer", artboard);
+            var textLayers = selectLayersOfTypeInContainer(context.document, "MSTextLayer", artboard);
             for ( var j = 0; j < textLayers.length; j++ ) {
                 translateTextLayersInSelection( textLayers[j], toLanguage )
             }
