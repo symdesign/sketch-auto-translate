@@ -9,19 +9,25 @@ Translates your selection on the current page no matter which type, apart from S
 
 Shortcut: `⇧` `⌘` `X` Translate Selection
 
+<img src="https://raw.githubusercontent.com/symdesign/sketch-auto-translate/master/Assets/TranslateSelection.gif" alt="Screen Recording 'Translate Selection'" >
+
 
 ## Translate Current Page
 Translates all Text Layers and Symbol Overrides on Artboards in your current Page but skips them out if placed outside.
 
 Shortcut: `⇧` `⌘` `P` Translate Current **P**age
 
+<img src="https://raw.githubusercontent.com/symdesign/sketch-auto-translate/master/Assets/TranslatePage.gif" alt="Screen Recording 'Translate Current Page'" >
+
 ## Translate Entire Document
 Translates all Text Layers and Symbol Overrides in the file that are on Artboards but skips them if placed inside a Symbol or outside an Artboard. I made this decision to avoid messing with the file structure.
 
 Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
 
+<img src="https://raw.githubusercontent.com/symdesign/sketch-auto-translate/master/Assets/TranslateEntireDocument.gif" alt="Screen Recording 'Translate Entire Document'" >
 
-## Generate a Google API Key
+
+## Set Google API Key...
 To create a Google Translate API Key you need a paid account. Luckily, Google offers a [One Year Free Trial](https://console.cloud.google.com/freetrial) where it gives you away $300 in credits. 
 
 This means, as long as you don't exceed that amount (within one year) you won't have to pay anything. [Check out their pricing](https://cloud.google.com/translate/pricing) to find out how many Language Detections and Translations this is.
