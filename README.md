@@ -2,6 +2,7 @@
   
 # Sketch Auto Translate Plugin
 Plugin for [Sketch](https://www.sketchapp.com/) to translate Text Layers and Symbol Overrides via Google Translate. [Read more about its origin on medium.com](https://medium.com/@symdesign/sketch-auto-translate-plugin-2e0985766228).
+[![Install PLUGIN NAME with Sketchpacks](http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png "Install Sketch Auto Translate with Sketchpacks")](https://www.sketchpacks.com/symdesign/sketch-auto-translate/install)
 
 
 <a href="https://www.sketchpacks.com/symdesign/sketch-auto-translate/install">
