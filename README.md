@@ -4,6 +4,11 @@
 Plugin for [Sketch](https://www.sketchapp.com/) to translate Text Layers and Symbol Overrides via Google Translate. [Read more about its origin on medium.com](https://medium.com/@symdesign/sketch-auto-translate-plugin-2e0985766228).
 
 
+<a href="https://www.sketchpacks.com/symdesign/sketch-auto-translate/install">
+  <img width="160" height="41" src="http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png" >
+</a>
+
+
 ## Translate Selection
 Translates your selection on the current page no matter which type, apart from Symbols.
 
