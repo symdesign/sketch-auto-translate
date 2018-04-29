@@ -1,50 +1,48 @@
 {
-  "author" : "Friedrich Schultheiss",
-  "bundleVersion" : 1,
-  "commands" : [
-    {
-      "script" : "main.cocoascript",
-      "name" : "Translate Selection",
-      "handler" : "runSelectionTranslation",
-      "identifier" : "scriptSelection",
-      "shortcut" : "shift cmd x"
+    "name": "Sketch Auto Translate",
+    "identifier": "design.sym.sketch-auto-translate",
+    "appcast": "https://github.com/symdesign/sketch-auto-translate/raw/master/Versions/SketchAutoTranslatev1.0.zip",
+    "version": "1.0",
+    "description": "Plugin to translate Sketch files into via Google Translate.",
+    "homepage": "https://github.com/symdesign/sketch-auto-translate",
+    "author": "Friedrich Schultheiss",
+    "authorEmail": "hello@sym.design",
+    "menu": {
+        "items": [
+            "scriptSelection",
+            "scriptPage",
+            "scriptDocument",
+            "scriptKey"
+        ],
+        "title": "Translate"
     },
-    {
-      "script" : "main.cocoascript",
-      "name" : "Translate Current Page",
-      "handler" : "runPageTranslation",
-      "identifier" : "scriptPage",
-      "shortcut" : "shift cmd p"
-    },
-    {
-      "script" : "main.cocoascript",
-      "name" : "Translate Entire Document",
-      "handler" : "runDocumentTranslation",
-      "identifier" : "scriptDocument",
-      "shortcut" : "shift cmd d"
-    },
-    {
-      "script" : "main.cocoascript",
-      "name" : "Set Google API Key...",
-      "handler" : "runSetApiKey",
-      "identifier" : "scriptKey"
-    }
-  ],
-  "menu" : {
-    "items" : [
-      "scriptSelection",
-      "scriptPage",
-      "scriptDocument",
-      "scriptKey"
-    ],
-    "title" : "Translate"
-  },
-  "compatibleVersion" : 4,
-  "homepage" : "",
-  "identifier" : "",
-  "appcast": "",
-  "version" : "1.0",
-  "description" : "Plugin to translate Sketch files into via Google Translate.",
-  "authorEmail" : "",
-  "name" : "Sketch Auto Translate"
+    "commands": [
+        {
+            "script": "main.cocoascript",
+            "name": "Translate Selection",
+            "handler": "runSelectionTranslation",
+            "identifier": "scriptSelection",
+            "shortcut": "shift cmd x"
+        },
+        {
+            "script": "main.cocoascript",
+            "name": "Translate Current Page",
+            "handler": "runPageTranslation",
+            "identifier": "scriptPage",
+            "shortcut": "shift cmd p"
+        },
+        {
+            "script": "main.cocoascript",
+            "name": "Translate Entire Document",
+            "handler": "runDocumentTranslation",
+            "identifier": "scriptDocument",
+            "shortcut": "shift cmd d"
+        },
+        {
+            "script": "main.cocoascript",
+            "name": "Set Google API Key...",
+            "handler": "runSetApiKey",
+            "identifier": "scriptKey"
+        }
+    ]
 }

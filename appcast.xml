@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:plugin="https://github.com/symdesign/sketch-auto-translate/raw/master/xml-namespaces/plugin"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Sketch Auto Translate Plugin</title>
+    <link>https://github.com/symdesign/sketch-auto-translate/raw/master/appcast.xml</link>
+    <description>Plugin to translate Text Layers and Symbol Overrides via Google Translate.</description>
+    <language>en</language>
+      <item>
+        <title>Version 1.0</title>
+        <pubDate>2018-04-29 09:20:00 CEST</pubDate>
+        <description>
+            <![CDATA[
+                <ul>
+                    <li>Translate Selection</li>
+                    <li>Translate Current Page</li>
+                    <li>Translate Entire Document</li>
+                    <li>Set Google API Key...</li>
+                </ul>
+            ]]>
+        </description>
+        <enclosure url="https://github.com/symdesign/sketch-auto-translate/raw/master/Versions/SketchAutoTranslate_v1.0.zip" plugin:version="1.0" />
+      </item>
+  </channel>
+</rss>
