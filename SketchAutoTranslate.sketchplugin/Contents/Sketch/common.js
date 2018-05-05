@@ -4,9 +4,10 @@ var app              = NSApplication.sharedApplication();
 var googleApiKey     = getOption('apiKey', '');
 var sketchVersion    = MSApplicationMetadata.metadata().appVersion;
 
+var promises        = [];
 
 function isArtboard( selection ) {
-    if ([selection class] != MSArtboardGroup) return false;
+    if ( [selection class] != MSArtboardGroup) return false;
     return true;
 }
 
@@ -46,14 +47,14 @@ function selectLayersOfTypeInContainer(doc, layerType, containerLayer) {
     return layers;
 }
 
-function translateTextLayersInSelection( selection, toLanguage ) {
+function translateTextLayersInSelection( selection, toLanguage, doc ) {
     
     var text        = selection.stringValue(),
     baseLanguage    = detectLenguage( text );
     
     if ( baseLanguage == 'und' ) return;
-    
-    selection.setStringValue( getSingleTranslation( selection.stringValue(), baseLanguage, toLanguage) );
+    log(getSingleTranslation( text, baseLanguage, toLanguage))
+    selection.setStringValue( getSingleTranslation( text, baseLanguage, toLanguage) );
     return selection
 }
 
@@ -136,23 +137,26 @@ function detectLenguage( text ) {
 
 
 function getSingleTranslation( text, baseLanguage, toLanguage) {
+
     var escapedText = text.replace('"', '\"');
     var data = JSON.stringify({q:escapedText, source: baseLanguage, target: toLanguage});
-    
+    if (baseLanguage == toLanguage) return text;
+
     var singleTranslation = networkRequest(["-X", "POST", "https://translation.googleapis.com/language/translate/v2?key=" + googleApiKey, "-H", "Content-Type: application/json; charset=utf-8", "-d", data]);
-    
+
+    log( text + ' 👉 ' + singleTranslation.data.translations[0].translatedText )
     return decodeHtmlEntity(singleTranslation.data.translations[0].translatedText);
-}
+}   
 
 var decodeHtmlEntity = function(str) {
-
+    
     str = str.replace(/&#(\d+);/g, function(match, dec) {
         return String.fromCharCode(dec);
     });
-
+    
     str = str.replace('&lt;','<')
-             .replace('&gt;','>')
-
+    .replace('&gt;','>')
+    
     return str
 };
 
@@ -228,4 +232,33 @@ function setPreferences( key, value ) {
     
     userDefaults.setObject_forKey(preferences, pluginIdentifier);
     userDefaults.synchronize();
+}
+
+function setInterval(fn, time_ms) {
+    coscript.setShouldKeepAround(true);
+    var time_sec = time_ms / 1000;
+    coscript.scheduleWithRepeatingInterval_jsFunction(time_sec, fn);
+}
+
+function clearInterval(interval) {
+    coscript.setShouldKeepAround(false);
+    interval.cancel();
+}
+
+function setTimeout(fn, time_ms) {
+    coscript.setShouldKeepAround(true);
+    var time_sec = time_ms / 1000;
+    coscript.scheduleWithInterval_jsFunction(time_sec,fn);
+}
+
+function loop(count, callback, done) {
+    var counter = 0, speed = 500; // in ms
+    var next = function () {
+        setTimeout(iteration, speed);
+    };
+    var iteration = function () {
+        counter < count ? callback(counter, next) : ( done && done() )
+        counter++;
+    }
+    iteration();
 }
