@@ -368,7 +368,7 @@ Translator.prototype.createWindow = function(context, title) {
         link.setBezelStyle(NSInlineBezelStyle);
         link.setCOSJSTargetFunction(function() {
 
-            var url = NSURL.URLWithString(@"https://github.com/eddiesigner/sketch-translate-me/wiki/Generate-a-Google-API-Key");
+            var url = NSURL.URLWithString(@"https://github.com/symdesign/sketch-auto-translate#set-google-api-key");
             
             if (!NSWorkspace.sharedWorkspace().openURL(url)) {
                 log( @"Failed to open url:" + url.description() );
