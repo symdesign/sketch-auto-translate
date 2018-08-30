@@ -3,9 +3,44 @@
 # Sketch Auto Translate Plugin
 Plugin for [Sketch](https://www.sketchapp.com/) to translate Text Layers and Symbol Overrides via Google Translate. [Read more about its origin on medium.com](https://medium.com/sketch-app-sources/sketch-auto-translate-plugin-fd8f021faa30).
 
+
 <a href="https://www.sketchpacks.com/symdesign/sketch-auto-translate/install">
-  <img width="160" height="41" src="http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png" >
+  <img width="160" height="41" src="https://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png" >
 </a>
+
+
+<style>
+.btn {
+	  display: block;
+	  margin: 40px auto 0px;
+    width: 160px;
+    text-align: center;
+    background: #FDAB2A;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px -8px #E0B97B;
+    padding: 10px 17px;
+    margin: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #021F69;
+    text-decoration: none !important;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.btn:hover {
+	  transform: translateY(-3px);
+}
+.btn .fa {
+	  margin-right: 5px;
+}
+</style>
+
+<hr>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZK3TU55XHALSE">
+<div class="btn">Donate</div>
+<img width="160" height="auto" src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/cc-badge-powevered.png"/ ></a>
 
 
 ## Translate Selection
