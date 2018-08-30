@@ -9,9 +9,9 @@ Plugin for [Sketch](https://www.sketchapp.com/) to translate Text Layers and Sym
 </a>
 
 
-<style>
-.btn {
-	  display: block;
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZK3TU55XHALSE">
+<div style="
+    display: block;
 	  margin: 40px auto 0px;
     width: 160px;
     text-align: center;
@@ -28,18 +28,7 @@ Plugin for [Sketch](https://www.sketchapp.com/) to translate Text Layers and Sym
     text-decoration: none !important;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
-}
-.btn:hover {
-	  transform: translateY(-3px);
-}
-.btn .fa {
-	  margin-right: 5px;
-}
-</style>
-
-<hr>
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZK3TU55XHALSE">
-<div class="btn">Donate</div>
+    ">Donate</div>
 <img width="160" height="auto" src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/cc-badge-powevered.png"/ ></a>
 
 
