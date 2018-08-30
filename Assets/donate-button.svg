@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="320px" height="89px" viewBox="0 0 320 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="320px" height="90px" viewBox="0 0 320 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
     <title>donate-button</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="donate-button">
-            <rect id="Background" fill="#FDAB2A" x="0" y="0" width="320" height="89" rx="8"></rect>
-            <text id="Donate" font-family="CircularStd-Medium, Circular Std" font-size="31" font-weight="400" letter-spacing="1.5" fill="#021F69">
-                <tspan x="104" y="56">Donate</tspan>
+            <rect id="Background" fill="#FC7421" x="0" y="0" width="320" height="90" rx="8"></rect>
+            <text id="Donate" font-family="CircularStd-Medium, Circular Std" font-size="31" font-weight="400" letter-spacing="1.20000005" fill="#FFFFFF">
+                <tspan x="106" y="57">Donat</tspan>
+                <tspan x="197.932" y="57">e</tspan>
             </text>
-            <path d="M63.0700943,31 C59.6982937,31 57.5698875,32.64098 56.3346604,34.1248205 C55.0994334,32.64098 52.9713539,31 49.5982465,31 C43.8566133,31 40,36.3188921 40,41.2862624 C40,48.5176166 53.8903419,58.2092973 55.4741505,59.2903251 C55.7335449,59.4670661 56.0341027,59.5556 56.3346604,59.5556 C56.6352182,59.5556 56.9357759,59.4670661 57.1951704,59.2903251 C58.778979,58.2092973 72.6693209,48.5176166 72.6693209,41.2862624 C72.6693209,36.3188921 68.8120542,31 63.0700943,31 Z" id="Heart" fill="#021F69" fill-rule="nonzero" opacity="0.119698661"></path>
+            <path d="M63.0700943,32 C59.6982937,32 57.5698875,33.64098 56.3346604,35.1248205 C55.0994334,33.64098 52.9713539,32 49.5982465,32 C43.8566133,32 40,37.3188921 40,42.2862624 C40,49.5176166 53.8903419,59.2092973 55.4741505,60.2903251 C55.7335449,60.4670661 56.0341027,60.5556 56.3346604,60.5556 C56.6352182,60.5556 56.9357759,60.4670661 57.1951704,60.2903251 C58.778979,59.2092973 72.6693209,49.5176166 72.6693209,42.2862624 C72.6693209,37.3188921 68.8120542,32 63.0700943,32 Z" id="Heart" fill="#021F69" fill-rule="nonzero" opacity="0.119698661"></path>
         </g>
     </g>
 </svg>
