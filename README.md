@@ -8,27 +8,11 @@ Plugin for [Sketch](https://www.sketchapp.com/) to translate Text Layers and Sym
   <img width="160" height="41" src="https://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png" >
 </a>
 
+<br>
+<br>
 
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZK3TU55XHALSE">
-<div style="
-    display: block;
-	  margin: 40px auto 0px;
-    width: 160px;
-    text-align: center;
-    background: #FDAB2A;
-    border-radius: 3px;
-    box-shadow: 0 10px 20px -8px #E0B97B;
-    padding: 10px 17px;
-    margin: 10px 0;
-    font-size: 18px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    color: #021F69;
-    text-decoration: none !important;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    ">Donate</div>
+<img width="160" height="45" src="https://raw.githubusercontent.com/symdesign/sketch-auto-translate/master/Assets/donate-button.svg?sanitize=true"><br>
 <img width="160" height="auto" src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/cc-badge-powevered.png"/ ></a>
 
 
