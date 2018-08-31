@@ -12,9 +12,14 @@ Plugin for [Sketch](https://www.sketchapp.com/) to translate Text Layers and Sym
 <br>
 
 <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZK3TU55XHALSE">
+<!-- Donate Button » -->
 <img width="160" height="45" src="https://raw.githubusercontent.com/symdesign/sketch-auto-translate/master/Assets/donate-button.svg?sanitize=true" alt="Donate">
+<!-- « Donate Button -->
 <br>
-<img width="160" height="auto" src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/cc-badge-powevered.png"/ ></a>
+<!-- Powered by » -->
+<img width="160" height="auto" src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/cc-badge-powevered.png"/ >
+<!-- « Powered by -->
+</a>
 
 
 ## Translate Selection

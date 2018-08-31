@@ -9,7 +9,11 @@
         <title>Version 1.0.1</title>
         <pubDate>2018-08-30 21:15:00 CEST</pubDate>
         <description>
-            <![CDATA[ Minor changes. ]]>
+            <![CDATA[
+                <ul>
+                    <li>Minor changes.</li>
+                </ul>
+            ]]>
         </description>
         <enclosure url="https://github.com/symdesign/sketch-auto-translate/raw/master/Versions/SketchAutoTranslate_v1.0.zip" plugin:version="1.0" />
       </item>
