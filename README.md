@@ -69,12 +69,3 @@ Go to `API & Services > Credentials` again and click the button `Create credenti
 Copy your API Key, go back to Sketch and select `Plugins > Translate > Set Google API Key...` in the menu. After that you get prompted to paste your key.
 
 
-## Use without API Key
-
-With Sketch Auto Translate Pro you don't need to set up anything. Just plug it in and start translating.
-
-<big>€ 4.99</big> 
-
-And no hussle at all.
-
-https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S
