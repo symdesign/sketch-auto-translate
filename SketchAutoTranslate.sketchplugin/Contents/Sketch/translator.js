@@ -275,8 +275,6 @@ Translator.prototype.translatePage = function (context) {
     var thisPage    = [doc currentPage];
     var artboards   = [thisPage artboards];
     
-    if (artboards.length === 0) {return}
-    
     var dialog          = this.createWindow( context,'Translate Current Page' );
     var languageIndex   = handleAlertResponse(dialog, dialog.runModal());
     
@@ -284,6 +282,11 @@ Translator.prototype.translatePage = function (context) {
 
     var toLanguage = this.languageCodes[languageIndex];
     var page       = getCurrentPage(context);
+
+    if (artboards.length === 0) {
+        doc.showMessage('There are no artboards which contain text.')
+        return;
+    }
 
     var artboards = selectLayersOfTypeInContainer(context.document, "MSArtboardGroup", page);
     for ( var i = 0; i < artboards.length; i++ ) {
@@ -323,7 +326,10 @@ Translator.prototype.translateDocument = function (context) {
 
         [doc setCurrentPage:thisPage];
         
-        if (artboards.length === 0) {return}
+        if (artboards.length === 0) {
+            doc.showMessage('There are no artboards which contain text.')
+            return;
+        }
 
         var artboards = selectLayersOfTypeInContainer(context.document, "MSArtboardGroup", thisPage);
         
