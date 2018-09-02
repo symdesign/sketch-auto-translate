@@ -69,6 +69,7 @@ Go to `API & Services > Credentials` again and click the button `Create credenti
 Copy your API Key, go back to Sketch and select `Plugins > Translate > Set Google API Key...` in the menu. After that you get prompted to paste your key.
 
 
+- - - -
 
 ## Use without API Key
 If you want to avoid being charged by Google per translated character after one year of free usage.
