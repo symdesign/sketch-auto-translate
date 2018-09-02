@@ -1,7 +1,7 @@
 <img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="100" height="100" alt="Sketch Auto Translate Plugin">
   
 # Sketch Auto Translate Plugin
-Plugin for [Sketch](https://www.sketchapp.com/) to translate Text Layers and Symbol Overrides via Google Translate. [Read more about its origin on medium.com](https://medium.com/sketch-app-sources/sketch-auto-translate-plugin-fd8f021faa30).
+Sketch Auto Translate is tested with the current [Sketch 51.2](https://www.sketchapp.com/). It is a plugin to translate Text Layers and Symbol Overrides. [Read more about its origin on medium.com](https://medium.com/sketch-app-sources/sketch-auto-translate-plugin-fd8f021faa30).
 
 
 <a href="https://www.sketchpacks.com/symdesign/sketch-auto-translate/install">
@@ -68,4 +68,19 @@ Go to `API & Services > Credentials` again and click the button `Create credenti
 
 Copy your API Key, go back to Sketch and select `Plugins > Translate > Set Google API Key...` in the menu. After that you get prompted to paste your key.
 
+
+
+## Use without API Key
+If you want to avoid being charged by Google per translated character after one year of free usage.
+
+With Sketch Auto Translate Pro you'll get the exact same nice plugin but without the hussle, without recurring costs. Just plug it in and start translating.
+
+[Single User License](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S)<br>
+<big>€ 4.99</big> 
+
+[5 Users License](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C)<br>
+<big>€ 9.99</big>
+
+[10 Users License](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL)<br>
+<big>€ 14.99</big>
 
