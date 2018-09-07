@@ -5,7 +5,7 @@
     <link>https://github.com/symdesign/sketch-auto-translate/raw/master/appcast.xml</link>
     <description>Plugin to translate Text Layers and Symbol Overrides via Google Translate.</description>
     <language>en</language>
-          <item>
+    <item>
         <title>Version 1.1</title>
         <pubDate>2018-09-08 21:15:00 CEST</pubDate>
         <description>
