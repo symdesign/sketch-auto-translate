@@ -368,21 +368,48 @@ Translator.prototype.createWindow = function(context, title) {
     
     if (apiKey.length == 0) {
 
-        var link = NSButton.alloc().initWithFrame( NSMakeRect(0, 0, 200, 20) );
-
-        link.setTitle('How to get a Google API Key');
-        link.setBezelStyle(NSInlineBezelStyle);
+        var link = NSButton.alloc().initWithFrame( NSMakeRect(0, 0, 300, 24) );
+        link.setTitle('Get a Google API Key');
+        link.setBezelStyle(NSBezelStyleTexturedRounded);
         link.setCOSJSTargetFunction(function() {
-
-            var url = NSURL.URLWithString(@"https://github.com/symdesign/sketch-auto-translate#set-google-api-key");
+    
+            var url = NSURL.URLWithString(@"https://github.com/symdesign/sketch-auto-translate/wiki/Get-a-Google-API-key");
             
             if (!NSWorkspace.sharedWorkspace().openURL(url)) {
                 log( @"Failed to open url:" + url.description() );
             }
-
+    
         });
-        
         dialogWindow.addAccessoryView(link);
+    
+        var tf = NSTextView.alloc().initWithFrame(NSMakeRect(0, 0, 300, 40));
+        //tf.setTextColor(color);
+        //tf.setFont(NSFont.systemFontOfSize(size));
+        tf.setString('After one year of free usage, you will be charged by Google per translated character.\n');
+        tf.setEditable(false);
+        tf.setDrawsBackground(false);
+        dialogWindow.addAccessoryView(tf);
+    
+    
+        var link = NSButton.alloc().initWithFrame( NSMakeRect(0, 0, 300, 24) );
+        link.setTitle('Use without API key');
+        link.setBezelStyle(NSBezelStyleTexturedRounded);
+        link.setCOSJSTargetFunction(function() {
+    
+            var url = NSURL.URLWithString(@"https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key");
+            
+            if (!NSWorkspace.sharedWorkspace().openURL(url)) {
+                log( @"Failed to open url:" + url.description() );
+            }
+    
+        });
+        dialogWindow.addAccessoryView(link);
+    
+        var tf = NSTextView.alloc().initWithFrame(NSMakeRect(0, 0, 300, 40));
+        tf.setString('No signup or recurring costs after a flat one-time payment.');
+        tf.setEditable(false);
+        tf.setDrawsBackground(false);
+        dialogWindow.addAccessoryView(tf);
 
     } else {
 
@@ -410,9 +437,60 @@ Translator.prototype.createKeyWindow = function(context, title) {
     var dialogWindow = COSAlertWindow.new();
     
     dialogWindow.setMessageText( title );
-    dialogWindow.setInformativeText('Paste here your Google API Key (you have to do this just once):');
-    
+    dialogWindow.setInformativeText('Paste here your Google API Key:');
     dialogWindow.addTextFieldWithValue(apiKey.length == 0 ? '' : getOption('apiKey'));
+
+    var tf = NSTextView.alloc().initWithFrame(NSMakeRect(0, 0, 300, 24));
+    //tf.setTextColor(color);
+    tf.setFont(NSFont.systemFontOfSize( 14 ));
+    tf.setString('\nNeed Help?');
+    tf.setEditable(false);
+    tf.setDrawsBackground(false);
+    dialogWindow.addAccessoryView(tf);
+
+    var link = NSButton.alloc().initWithFrame( NSMakeRect(0, 0, 300, 20) );
+    link.setTitle('Get a Google API Key');
+    link.setBezelStyle(NSBezelStyleTexturedRounded);
+    link.setCOSJSTargetFunction(function() {
+
+        var url = NSURL.URLWithString(@"https://github.com/symdesign/sketch-auto-translate/wiki/Get-a-Google-API-key");
+        
+        if (!NSWorkspace.sharedWorkspace().openURL(url)) {
+            log( @"Failed to open url:" + url.description() );
+        }
+
+    });
+    dialogWindow.addAccessoryView(link);
+
+    var tf = NSTextView.alloc().initWithFrame(NSMakeRect(0, 0, 300, 40));
+    //tf.setTextColor(color);
+    //tf.setFont(NSFont.systemFontOfSize(size));
+    tf.setString('After one year of free usage, you will be charged by Google per translated character.\n');
+    tf.setEditable(false);
+    tf.setDrawsBackground(false);
+    dialogWindow.addAccessoryView(tf);
+
+
+    var link = NSButton.alloc().initWithFrame( NSMakeRect(0, 0, 300, 20) );
+    link.setTitle('Use without API key');
+    link.setBezelStyle(NSBezelStyleTexturedRounded);
+    link.setCOSJSTargetFunction(function() {
+
+        var url = NSURL.URLWithString(@"https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key");
+        
+        if (!NSWorkspace.sharedWorkspace().openURL(url)) {
+            log( @"Failed to open url:" + url.description() );
+        }
+
+    });
+    dialogWindow.addAccessoryView(link);
+
+    var tf = NSTextView.alloc().initWithFrame(NSMakeRect(0, 0, 300, 40));
+    tf.setString('No signup or recurring costs after a flat one-time payment.');
+    tf.setEditable(false);
+    tf.setDrawsBackground(false);
+    dialogWindow.addAccessoryView(tf);
+
     
     var apiKeyTextBox = dialogWindow.viewAtIndex(0);
     
