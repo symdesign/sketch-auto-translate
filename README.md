@@ -72,16 +72,17 @@ Copy your API Key, go back to Sketch and select `Plugins > Translate > Set Googl
 - - - -
 
 ## Use without API Key
-If you want to avoid being charged by Google per translated character after one year of free usage.
+I developed a solution which you can use without the hustle of setting up a key while fearing a bill at the end of the month. With a flat one-time payment to a young ambitious guy (me) you’ll get the exact same nice plugin — but with following extras:
+1. N**o API key needed.** Just install and use. No sign-up, no nothing.
 
-With Sketch Auto Translate Pro you'll get the exact same nice plugin but without the hussle, without recurring costs. Just plug it in and start translating.
+2. **No recurring or hidden costs.** You’ll get a plugin which you can use as long as you like.
 
-[Single User License](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S)<br>
-<big>€ 4.99</big> 
+  
+I will do my best to regularly push compatibility updates to both plugin versions, one and two. But without any further ado:
 
-[5 Users License](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C)<br>
-<big>€ 9.99</big>
 
-[10 Users License](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL)<br>
-<big>€ 14.99</big>
+|[Single User](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S)|[5 Users](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C)|[10 Users](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL)|
+|---|---|---|
+|€ 4.99|€ 9.99|€ 14.99|
+
 
