@@ -1,12 +1,12 @@
 {
     "name": "Sketch Auto Translate",
-    "identifier": "design.sym.sketch-auto-translate",
+    "description": "Plugin to translate Sketch files into via Google Translate.",
+    "author": "Friedrich Schultheiss",
+    "email": "hello@sym.design",
+    "homepage": "https://github.com/symdesign/sketch-auto-translate",
     "appcast": "https://raw.githubusercontent.com/symdesign/sketch-auto-translate/master/appcast.xml",
     "version": "1.1",
-    "description": "Plugin to translate Sketch files into via Google Translate.",
-    "homepage": "https://github.com/symdesign/sketch-auto-translate",
-    "author": "Friedrich Schultheiss",
-    "authorEmail": "hello@sym.design",
+    "identifier": "design.sym.sketch-auto-translate",
     "menu": {
         "items": [
             "scriptSelection",
