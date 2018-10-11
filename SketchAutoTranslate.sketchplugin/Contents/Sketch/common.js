@@ -50,7 +50,7 @@ function selectLayersOfTypeInContainer(doc, layerType, containerLayer) {
 function translateTextLayersInSelection( selection, toLanguage, doc ) {
     
     var text        = selection.stringValue(),
-    baseLanguage    = detectLenguage( text );
+    baseLanguage    = detectLanguage( text );
     
     if ( baseLanguage == 'und' ) return;
     log(getSingleTranslation( text, baseLanguage, toLanguage))
@@ -69,7 +69,7 @@ function translateOverridesInSelection( selection, toLanguage ) {
         else { for ( b in overrides[a] ) { text += ' ' + overrides[a][b] } }
     }
     var translation = {},
-    baseLanguage    = detectLenguage( text );
+    baseLanguage    = detectLanguage( text );
     
     if ( baseLanguage == 'und' ) return;
     
@@ -126,7 +126,7 @@ function createSelect(options) {
     return select;
 }
 
-function detectLenguage( text ) {
+function detectLanguage( text ) {
     var escapedText = text.replace('"', '\"');
     var data = JSON.stringify({q:escapedText});
     
@@ -138,6 +138,8 @@ function detectLenguage( text ) {
 
 function getSingleTranslation( text, baseLanguage, toLanguage) {
 
+    setPreferences('toLanguage', toLanguage );
+
     var escapedText = text.replace('"', '\"');
     var data = JSON.stringify({q:escapedText, source: baseLanguage, target: toLanguage});
     if (baseLanguage == toLanguage) return text;
@@ -148,17 +150,6 @@ function getSingleTranslation( text, baseLanguage, toLanguage) {
     return decodeHtmlEntity(singleTranslation.data.translations[0].translatedText);
 }   
 
-var decodeHtmlEntity = function(str) {
-    
-    str = str.replace(/&#(\d+);/g, function(match, dec) {
-        return String.fromCharCode(dec);
-    });
-    
-    str = str.replace('&lt;','<')
-    .replace('&gt;','>')
-    
-    return str
-};
 
 function networkRequest( args ) {
     var task = NSTask.alloc().init();
@@ -262,3 +253,33 @@ function loop(count, callback, done) {
     }
     iteration();
 }
+
+
+  
+function decodeHtmlEntity(str) {
+    
+    var entities = {
+        'amp': '&',
+        'apos': '\'',
+        '#x27': '\'',
+        '#x2F': '/',
+        '#39': '\'',
+        '#47': '/',
+        'lt': '<',
+        'gt': '>',
+        'nbsp': ' ',
+        'quot': '"'
+    }
+
+    str = str.replace(/&#(\d+);/g, function(match, dec) {
+        return String.fromCharCode(dec);
+    });
+    
+    for ( var key in entities) {
+
+        str = str.replace( '&' + key + ';', entities[ key ] )
+
+    }
+
+    return str
+};

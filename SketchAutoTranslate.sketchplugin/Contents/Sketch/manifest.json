@@ -5,8 +5,9 @@
     "email": "hello@sym.design",
     "homepage": "https://github.com/symdesign/sketch-auto-translate",
     "appcast": "https://raw.githubusercontent.com/symdesign/sketch-auto-translate/master/appcast.xml",
-    "version": "1.0",
+    "version": "1.2",
     "identifier": "design.sym.sketch-auto-translate",
+    "compatibleVersion": "52.2",
     "menu": {
         "items": [
             "scriptSelection",

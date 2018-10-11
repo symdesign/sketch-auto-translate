@@ -6,8 +6,12 @@
     <description>Plugin to translate Text Layers and Symbol Overrides via Google Translate.</description>
     <language>en</language>
     <item>
-        <title>1.1</title>
-        <enclosure url="https://github.com/symdesign/sketch-auto-translate/raw/master/Versions/SketchAutoTranslate.1.1.zip" sparkle:version="1.1" />
-      </item>
+      <title>1.2</title>
+      <enclosure url="https://github.com/symdesign/sketch-auto-translate/raw/master/Versions/SketchAutoTranslate.1.2.zip" sparkle:version="1.2" />
+    </item>
+    <item>
+      <title>1.1</title>
+      <enclosure url="https://github.com/symdesign/sketch-auto-translate/raw/master/Versions/SketchAutoTranslate.1.1.zip" sparkle:version="1.1" />
+    </item>
   </channel>
 </rss>

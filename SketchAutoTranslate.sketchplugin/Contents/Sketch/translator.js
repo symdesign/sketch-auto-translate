@@ -3,10 +3,6 @@
 function Translator () {}
 
 Translator.prototype.languageLabels = [
-    'English',
-    'German',
-    'Norwegian',
-    '',
     'Afrikaans',
     'Albanian',
     'Amharic',
@@ -27,6 +23,7 @@ Translator.prototype.languageLabels = [
     'Czech',
     'Danish',
     'Dutch',
+    'English',
     'Esperanto',
     'Estonian',
     'Finnish',
@@ -34,6 +31,7 @@ Translator.prototype.languageLabels = [
     'Frisian',
     'Galician',
     'Georgian',
+    'German',
     'Greek',
     'Gujarati',
     'Haitian Creole',
@@ -71,6 +69,7 @@ Translator.prototype.languageLabels = [
     'Mongolian',
     'Myanmar (Burmese)',
     'Nepali',
+    'Norwegian',
     'Nyanja (Chichewa)',
     'Pashto',
     'Persian',
@@ -112,10 +111,6 @@ Translator.prototype.languageLabels = [
   
   
   Translator.prototype.languageCodes = [
-    'en',
-    'de',
-    'no',
-    '',
     'af',
     'sq',
     'am',
@@ -136,6 +131,7 @@ Translator.prototype.languageLabels = [
     'cs',
     'da',
     'nl',
+    'en',
     'eo',
     'et',
     'fi',
@@ -143,6 +139,7 @@ Translator.prototype.languageLabels = [
     'fy',
     'gl',
     'ka',
+    'de',
     'el',
     'gu',
     'ht',
@@ -180,6 +177,7 @@ Translator.prototype.languageLabels = [
     'mn',
     'my',
     'ne',
+    'no',
     'ny',
     'ps',
     'fa',
@@ -413,7 +411,9 @@ Translator.prototype.createWindow = function(context, title) {
 
     } else {
 
+        var lastSelect = String( getOption('toLanguage', 'en') );
         var languageSelect = createSelect(this.languageLabels);
+        languageSelect.selectItemAtIndex( this.languageCodes.indexOf( lastSelect ) )
         dialogWindow.addAccessoryView(languageSelect);
         
         dialogWindow.addButtonWithTitle('OK');
