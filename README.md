@@ -46,9 +46,11 @@ Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
 
 
 ## Set Google API Key...
-To create a Google Translate API Key you need a paid account. Luckily, Google offers a [One Year Free Trial](https://console.cloud.google.com/freetrial) where it gives you away $300 in credits. 
+To create a Google Translate API Key you need a paid account at [Google Cloud Platform](https://cloud.google.com). 
 
-This means, as long as you don't exceed that amount (within one year) you won't have to pay anything. [Check out their pricing](https://cloud.google.com/translate/pricing) to find out how many Language Detections and Translations this is.
+There is also a Free Trial of $300 in credits which means, as long as you don't exceed that amount you won't have to pay anything. 
+
+Be aware, both options require a Credit Card. [Check out their pricing](https://cloud.google.com/translate/pricing) to find out how many Language Detections and Translations you can get.
 
 
 ### 1. Create a new Project
