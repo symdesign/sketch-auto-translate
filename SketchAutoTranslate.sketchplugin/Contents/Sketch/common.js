@@ -4,21 +4,67 @@ var app              = NSApplication.sharedApplication();
 var googleApiKey     = getOption('apiKey', '');
 var sketchVersion    = MSApplicationMetadata.metadata().appVersion;
 
-var promises        = [];
+var fontSizeLarge = 13
+var fontSizeSmall = 11;
+
+
+function text( fontSize, width, height, string ) {
+    
+    var text = NSTextView.alloc().initWithFrame(NSMakeRect(0, 0, width, height));
+    text.setFont(NSFont.systemFontOfSize( fontSize ));
+    text.setString( string );
+    text.setEditable(false);
+    text.setSelectable(false);
+    text.setDrawsBackground(false);
+
+    return text;
+}
+
+function button( fontSize, width, height, str,  url ) {
+    
+    var href = url;
+    var button = NSButton.alloc().initWithFrame( NSMakeRect(0, 0, width, height) );
+    button.setTitle( str );
+    button.setFont(NSFont.systemFontOfSize( fontSize ));
+    button.setBezelStyle(NSBezelStyleTexturedRounded);
+    button.setCOSJSTargetFunction(function() {
+
+        var url = NSURL.URLWithString( href );
+        if (!NSWorkspace.sharedWorkspace().openURL( url )) {
+            log( @"Failed to open url:" + url.description() );
+        }
+
+    });
+
+    return button;
+}
+
+function checkbox( fontSize, width, height, str, checked ) {
+
+    var checkbox = NSButton.alloc().initWithFrame( NSMakeRect(0, 0, width, height) )
+    checkbox.setButtonType( NSSwitchButton );
+    checkbox.setBezelStyle( 0 );
+    checkbox.setTitle( str );
+    checkbox.setFont( NSFont.systemFontOfSize( fontSize ) );
+    checkbox.setState( checked ? NSOnState : NSOffState ); // or NSOnState
+
+    return checkbox;
+}
 
 function isArtboard( selection ) {
-    if ( [selection class] != MSArtboardGroup) return false;
-    return true;
+    return selection instanceof MSArtboardGroup;
 }
 
 function isText( selection ) {
-    if ([selection class] != MSTextLayer) return false;
-    return true;
+    return selection instanceof MSTextLayer;
+}
+
+function isGroup( selection ) {
+    return selection instanceof MSLayerGroup;
 }
 
 function isSymbol( selection ) {
-    if ([selection class] != MSSymbolInstance) return false;
-    return true;
+    return selection instanceof MSSymbolInstance;
 }
 
 function getCurrentPage( context ) {
@@ -47,37 +93,29 @@ function selectLayersOfTypeInContainer(doc, layerType, containerLayer) {
     return layers;
 }
 
-function translateTextLayersInSelection( selection, toLanguage, doc ) {
-    
-    var text        = selection.stringValue(),
-    baseLanguage    = detectLanguage( text );
-    
-    if ( baseLanguage == 'und' ) return;
-    log(getSingleTranslation( text, baseLanguage, toLanguage))
-    selection.setStringValue( getSingleTranslation( text, baseLanguage, toLanguage) );
+function translateTextLayersInSelection( selection, fromLanguage, toLanguage, doc ) {
+    if ( fromLanguage != 'und' ) selection.setStringValue( getSingleTranslation( selection.stringValue(), fromLanguage, toLanguage) );
     return selection
 }
 
-function translateOverridesInSelection( selection, toLanguage ) {
+function translateOverridesInSelection( selection, fromLanguage, toLanguage ) {
     
-    var overrides = selection.overrides(),
-    text = ''
+    if ( fromLanguage == 'und' ) return;
+
+    var overrides = selection.overrides();
     
     for ( a in overrides ) {
         // Loop through 2 levels of overrides
         if ( typeof overrides[a].property === 'undefined' ) { text += ' ' + overrides[a] } 
         else { for ( b in overrides[a] ) { text += ' ' + overrides[a][b] } }
     }
-    var translation = {},
-    baseLanguage    = detectLanguage( text );
-    
-    if ( baseLanguage == 'und' ) return;
+    var translation = {};
     
     for ( a in overrides ) {
         if ( typeof overrides[a].property === 'undefined' ) {
-            translation[a] = getSingleTranslation( overrides[a], baseLanguage, toLanguage );
+            translation[a] = getSingleTranslation( overrides[a], fromLanguage, toLanguage );
         } else {
-            translation[a] = translateOverrides( overrides[a], baseLanguage, toLanguage )
+            translation[a] = translateOverrides( overrides[a], fromLanguage, toLanguage )
         }
         
         selection.overrides = translation
@@ -85,13 +123,13 @@ function translateOverridesInSelection( selection, toLanguage ) {
     }
 }
 
-function translateOverrides( overrides, baseLanguage, toLanguage ) {
+function translateOverrides( overrides, fromLanguage, toLanguage ) {
     var translation = {};
     for ( a in overrides ) {
         if ( typeof overrides[a].property === 'undefined' ) {
-            translation[a] = getSingleTranslation(overrides[a], baseLanguage, toLanguage);
+            translation[a] = getSingleTranslation(overrides[a], fromLanguage, toLanguage);
         } else {
-            translation[a] = translateOverrides( overrides[a], baseLanguage, toLanguage )
+            translation[a] = translateOverrides( overrides[a], fromLanguage, toLanguage )
         }
         return translation;
     }
@@ -99,7 +137,20 @@ function translateOverrides( overrides, baseLanguage, toLanguage ) {
 
 function handleAlertResponse(dialog, responseCode) {
     if (responseCode == "1000") {
-        return dialog.viewAtIndex(0).indexOfSelectedItem();
+
+        // Title
+        // InformativeText
+        // 0 = Label
+        // 1 = Selection
+        // 2 = Label
+        // 3 = Selection
+        // 4 = Constrain to Artboards
+
+        return [
+            dialog.viewAtIndex(1).indexOfSelectedItem(),
+            dialog.viewAtIndex(3).indexOfSelectedItem(),
+            0 /* In next version! dialog.viewAtIndex(4).indexOfSelectedItem() */
+        ]
     } else {
         return null;
     }
@@ -136,17 +187,15 @@ function detectLanguage( text ) {
 }
 
 
-function getSingleTranslation( text, baseLanguage, toLanguage) {
+function getSingleTranslation( text, fromLanguage, toLanguage) {
 
     setPreferences('toLanguage', toLanguage );
 
     var escapedText = text.replace('"', '\"');
-    var data = JSON.stringify({q:escapedText, source: baseLanguage, target: toLanguage});
-    if (baseLanguage == toLanguage) return text;
+    var data = JSON.stringify({q:escapedText, source: fromLanguage, target: toLanguage});
+    if (fromLanguage == toLanguage) return text;
 
     var singleTranslation = networkRequest(["-X", "POST", "https://translation.googleapis.com/language/translate/v2?key=" + googleApiKey, "-H", "Content-Type: application/json; charset=utf-8", "-d", data]);
-
-    log( text + ' 👉 ' + singleTranslation.data.translations[0].translatedText )
     return decodeHtmlEntity(singleTranslation.data.translations[0].translatedText);
 }   
 

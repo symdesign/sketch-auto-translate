@@ -97,17 +97,25 @@ Translator.prototype.languageLabels = [
 
 Translator.prototype.translateSelection = function (context) {
 
-    var dialog = this.createWindow( context, 'Translate Selection' );
-    var languageIndex = handleAlertResponse(dialog, dialog.runModal());
+    var selection = context.selection;
     
-    if (languageIndex == null) {return}
+    var title = selection.length == 0 ? 'Translate Current Page' : 'Translate Selection';
 
-    var selection      = context.selection,
-        container      = undefined,
-        toLanguage     = this.languageCodes[languageIndex];
+    if (selection.length == 0 ) {
+        context.document.showMessage( 'Nothing selected. Switching to Page Translation.' );
+    }
+
+    var dialog = this.createWindow( context, title );
+
+    var response = handleAlertResponse( dialog, dialog.runModal())
+    var fromIndex = response[0];
+    var toIndex = response[1];
+    var constrain = response[2]
+
+    var fromLanguage = this.languageCodes[fromIndex];
+    var toLanguage = this.languageCodes[toIndex];
 
     if ( selection.length == 0 ) {
-        // Window: You have nothing selected. Do you want to translate the entire page? 
         selection = selectLayersOfTypeInContainer(context.document, "MSArtboardGroup", getCurrentPage(context) );
     }
 
@@ -120,22 +128,22 @@ Translator.prototype.translateSelection = function (context) {
 
             var symbolInstances = selectLayersOfTypeInContainer(context.document, "MSSymbolInstance", artboard);
             for ( var j = 0; j < symbolInstances.length; j++ ) {
-                translateOverridesInSelection( symbolInstances[j], toLanguage );
+                translateOverridesInSelection( symbolInstances[j], fromLanguage, toLanguage );
             }
 
-            var textLayers      = selectLayersOfTypeInContainer(context.document, "MSTextLayer", artboard);
+            var textLayers = selectLayersOfTypeInContainer(context.document, "MSTextLayer", artboard);
             for ( var j = 0; j < textLayers.length; j++ ) {
-                translateTextLayersInSelection( textLayers[j], toLanguage )
+                translateTextLayersInSelection( textLayers[j], fromLanguage, toLanguage )
             }
 
         }
 
         if ( isText(selection[i]) ) {
-            translateTextLayersInSelection( selection[i], toLanguage )
+            translateTextLayersInSelection( selection[i], fromLanguage, toLanguage )
         }
 
         if ( isSymbol(selection[i]) ) {
-            translateOverridesInSelection( selection[i], toLanguage );
+            translateOverridesInSelection( selection[i], fromLanguage, toLanguage );
         }
 
     }
@@ -149,12 +157,15 @@ Translator.prototype.translatePage = function (context) {
     var thisPage    = [doc currentPage];
     var artboards   = [thisPage artboards];
     
-    var dialog          = this.createWindow( context,'Translate Current Page' );
-    var languageIndex   = handleAlertResponse(dialog, dialog.runModal());
-    
-    if (languageIndex == null) {return}
+    var dialog = this.createWindow( context,'Translate Current Page' );
 
-    var toLanguage = this.languageCodes[languageIndex];
+    var response = handleAlertResponse( dialog, dialog.runModal())
+    var fromIndex = response[0];
+    var toIndex = response[1];
+    var constrain = response[2]
+
+    var fromLanguage = this.languageCodes[fromIndex];
+    var toLanguage = this.languageCodes[toIndex];
     var page       = getCurrentPage(context);
 
     if (artboards.length === 0) {
@@ -172,12 +183,12 @@ Translator.prototype.translatePage = function (context) {
 
         var symbolInstances = selectLayersOfTypeInContainer(context.document, "MSSymbolInstance", artboard);
         for ( var j = 0; j < symbolInstances.length; j++ ) {
-            translateOverridesInSelection( symbolInstances[j], toLanguage );
+            translateOverridesInSelection( symbolInstances[j], fromLanguage, toLanguage );
         }
 
-        var textLayers      = selectLayersOfTypeInContainer(context.document, "MSTextLayer", artboard);
+        var textLayers = selectLayersOfTypeInContainer(context.document, "MSTextLayer", artboard);
         for ( var j = 0; j < textLayers.length; j++ ) {
-            translateTextLayersInSelection( textLayers[j], toLanguage )
+            translateTextLayersInSelection( textLayers[j], fromLanguage, toLanguage )
         }
     }
 }
@@ -187,11 +198,15 @@ Translator.prototype.translateDocument = function (context) {
     var doc      = context.document;
     var pages    = [doc pages];
 
-    var dialog          = this.createWindow( context, 'Translate Entire Document' );
-    var languageIndex   = handleAlertResponse(dialog, dialog.runModal());
+    var dialog    = this.createWindow( context, 'Translate Entire Document' );
+
+    var response = handleAlertResponse( dialog, dialog.runModal())
+    var fromIndex = response[0];
+    var toIndex = response[1];
+    var constrain = response[2]
     
-    if (languageIndex == null) {return}
-    var toLanguage = this.languageCodes[languageIndex];
+    var fromLanguage = this.languageCodes[fromIndex];
+    var toLanguage = this.languageCodes[toIndex];
     
     for ( var n = 0; n < pages.length; n++ ) {
 
@@ -216,12 +231,12 @@ Translator.prototype.translateDocument = function (context) {
     
             var symbolInstances = selectLayersOfTypeInContainer(context.document, "MSSymbolInstance", artboard);
             for ( var j = 0; j < symbolInstances.length; j++ ) {
-                translateOverridesInSelection( symbolInstances[j], toLanguage );
+                translateOverridesInSelection( symbolInstances[j], fromLanguage, toLanguage );
             }
     
             var textLayers = selectLayersOfTypeInContainer(context.document, "MSTextLayer", artboard);
             for ( var j = 0; j < textLayers.length; j++ ) {
-                translateTextLayersInSelection( textLayers[j], toLanguage )
+                translateTextLayersInSelection( textLayers[j], fromLanguage, toLanguage )
             }
         }
 
@@ -232,65 +247,62 @@ Translator.prototype.translateDocument = function (context) {
 
 Translator.prototype.createWindow = function(context, title) {
 
-    var apiKey          = getOption('apiKey', '');
-    var dialogWindow    = COSAlertWindow.new();
-    var informativeText = apiKey.length == 0 ? 'You have to set your Google API Key into the plugin settings (Plugins > Translate > Set Google API Key...)' : 'Please select the language in which you want to translate the text:';
-    var title           = title || 'Sketch Translate';
+    var apiKey = getOption('apiKey', '');
+    var title = title || 'Sketch Translate';
 
-    dialogWindow.setMessageText(title);
-    dialogWindow.setInformativeText(informativeText);
-    
-    if (apiKey.length == 0) {
+    if ( apiKey.length == 0 ) {
 
-        var link = NSButton.alloc().initWithFrame( NSMakeRect(0, 0, 300, 24) );
-        link.setTitle('Get a Google API Key');
-        link.setBezelStyle(NSBezelStyleTexturedRounded);
-        link.setCOSJSTargetFunction(function() {
-    
-            var url = NSURL.URLWithString(@"https://github.com/symdesign/sketch-auto-translate/wiki/Get-a-Google-API-key");
-            
-            if (!NSWorkspace.sharedWorkspace().openURL(url)) {
-                log( @"Failed to open url:" + url.description() );
-            }
-    
-        });
-        dialogWindow.addAccessoryView(link);
-    
-        var tf = NSTextView.alloc().initWithFrame(NSMakeRect(0, 0, 300, 40));
-        //tf.setTextColor(color);
-        //tf.setFont(NSFont.systemFontOfSize(size));
-        tf.setString('After one year of free usage, you will be charged by Google per translated character.\n');
-        tf.setEditable(false);
-        tf.setDrawsBackground(false);
-        dialogWindow.addAccessoryView(tf);
-    
-    
-        var link = NSButton.alloc().initWithFrame( NSMakeRect(0, 0, 300, 24) );
-        link.setTitle('Use without API key');
-        link.setBezelStyle(NSBezelStyleTexturedRounded);
-        link.setCOSJSTargetFunction(function() {
-    
-            var url = NSURL.URLWithString(@"https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key");
-            
-            if (!NSWorkspace.sharedWorkspace().openURL(url)) {
-                log( @"Failed to open url:" + url.description() );
-            }
-    
-        });
-        dialogWindow.addAccessoryView(link);
-    
-        var tf = NSTextView.alloc().initWithFrame(NSMakeRect(0, 0, 300, 40));
-        tf.setString('No signup or recurring costs after a flat one-time payment.');
-        tf.setEditable(false);
-        tf.setDrawsBackground(false);
-        dialogWindow.addAccessoryView(tf);
+        this.openKeyWindow( context )
 
     } else {
 
-        var lastSelect = String( getOption('toLanguage', 'en') );
-        var languageSelect = createSelect(this.languageLabels);
-        languageSelect.selectItemAtIndex( this.languageCodes.indexOf( lastSelect ) )
-        dialogWindow.addAccessoryView(languageSelect);
+        var dialogWindow = COSAlertWindow.new();
+
+        var doc = context.document;
+        var page = [doc currentPage];
+        var layers = context.selection.length == 0 ? [page children] : context.selection;
+        var excerpt = '';
+
+        function recursiveLoop( layers ) {      
+    
+            for ( var i = 0; i < layers.length; i++ ) {
+                var currentLayer = layers[i];
+                if ( isArtboard(currentLayer) || isGroup(currentLayer) ) {
+                    recursiveLoop( currentLayer.layers() )
+                }
+                if ( isText(currentLayer) ) {
+                    if ( excerpt == '' ) excerpt = currentLayer.stringValue();
+                    if ( currentLayer.stringValue().split(' ').length > 5 ) {
+                        excerpt = currentLayer.stringValue();
+                        return;
+                    }
+                }
+            }
+        }
+    
+        recursiveLoop( layers, '' );
+        
+        var fromLanguage = excerpt ? detectLanguage( excerpt ) : '';
+        var fromLanguageSelect = createSelect( this.languageLabels );
+        fromLanguageSelect.selectItemAtIndex( this.languageCodes.indexOf( fromLanguage ) )
+
+        var toLanguage = String( getOption('toLanguage', 'en') );
+        var toLanguageSelect = createSelect( this.languageLabels );
+        toLanguageSelect.selectItemAtIndex( this.languageCodes.indexOf( toLanguage ) )
+
+        dialogWindow.setMessageText(title);
+        dialogWindow.setInformativeText('Please select origin and target language of your text translation.');
+
+        dialogWindow.addAccessoryView( text( fontSizeLarge, 300, 10, 'From:')); // index 0
+        dialogWindow.addAccessoryView(fromLanguageSelect); // index 1
+
+        dialogWindow.addAccessoryView( text( fontSizeLarge, 300, 10, 'To:'));  // index 2
+        dialogWindow.addAccessoryView(toLanguageSelect);  // index 3
+
+        // In next version!
+        // dialogWindow.addAccessoryView( checkbox( fontSizeLarge, 300, 24, 'Constrain Translation to Artboards', false ))
+
+        dialogWindow.addAccessoryView( text( fontSizeLarge, 300, 8, '')); // Spacing
         
         dialogWindow.addButtonWithTitle('OK');
         dialogWindow.addButtonWithTitle('Cancel');
@@ -304,70 +316,25 @@ Translator.prototype.createWindow = function(context, title) {
 
 Translator.prototype.openKeyWindow = function(context) {
     var dialog   = this.createKeyWindow( context, 'Set Google API Key' );
-    var response = handleKeyAlertResponse(dialog, dialog.runModal());
+    var response = handleKeyAlertResponse( dialog, dialog.runModal() );
 }
-
 
 Translator.prototype.createKeyWindow = function(context, title) {
     var apiKey = getOption('apiKey', '');
     var dialogWindow = COSAlertWindow.new();
-    
+
     dialogWindow.setMessageText( title );
     dialogWindow.setInformativeText('Paste here your Google API Key:');
     dialogWindow.addTextFieldWithValue(apiKey.length == 0 ? '' : getOption('apiKey'));
 
-    var tf = NSTextView.alloc().initWithFrame(NSMakeRect(0, 0, 300, 24));
-    //tf.setTextColor(color);
-    tf.setFont(NSFont.systemFontOfSize( 14 ));
-    tf.setString('\nNeed Help?');
-    tf.setEditable(false);
-    tf.setDrawsBackground(false);
-    dialogWindow.addAccessoryView(tf);
+    dialogWindow.addAccessoryView( text( fontSizeLarge, 300, 24, '\nNeed Help?') );
 
-    var link = NSButton.alloc().initWithFrame( NSMakeRect(0, 0, 300, 20) );
-    link.setTitle('Get a Google API Key');
-    link.setBezelStyle(NSBezelStyleTexturedRounded);
-    link.setCOSJSTargetFunction(function() {
+    dialogWindow.addAccessoryView( button( fontSizeSmall, 300, 20, 'Get a Google API Key', 'https://github.com/symdesign/sketch-auto-translate/wiki/Get-a-Google-API-key'));
+    dialogWindow.addAccessoryView( text( fontSizeSmall, 300, 40, 'After one year of free usage, you will be charged by Google per translated character.\n'));
 
-        var url = NSURL.URLWithString(@"https://github.com/symdesign/sketch-auto-translate/wiki/Get-a-Google-API-key");
-        
-        if (!NSWorkspace.sharedWorkspace().openURL(url)) {
-            log( @"Failed to open url:" + url.description() );
-        }
+    dialogWindow.addAccessoryView( button( fontSizeSmall, 300, 20, 'Use without API key', 'https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key'));
+    dialogWindow.addAccessoryView( text( fontSizeSmall, 300, 40, 'No signup or recurring costs after a flat one-time payment.') );
 
-    });
-    dialogWindow.addAccessoryView(link);
-
-    var tf = NSTextView.alloc().initWithFrame(NSMakeRect(0, 0, 300, 40));
-    //tf.setTextColor(color);
-    //tf.setFont(NSFont.systemFontOfSize(size));
-    tf.setString('After one year of free usage, you will be charged by Google per translated character.\n');
-    tf.setEditable(false);
-    tf.setDrawsBackground(false);
-    dialogWindow.addAccessoryView(tf);
-
-
-    var link = NSButton.alloc().initWithFrame( NSMakeRect(0, 0, 300, 20) );
-    link.setTitle('Use without API key');
-    link.setBezelStyle(NSBezelStyleTexturedRounded);
-    link.setCOSJSTargetFunction(function() {
-
-        var url = NSURL.URLWithString(@"https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key");
-        
-        if (!NSWorkspace.sharedWorkspace().openURL(url)) {
-            log( @"Failed to open url:" + url.description() );
-        }
-
-    });
-    dialogWindow.addAccessoryView(link);
-
-    var tf = NSTextView.alloc().initWithFrame(NSMakeRect(0, 0, 300, 40));
-    tf.setString('No signup or recurring costs after a flat one-time payment.');
-    tf.setEditable(false);
-    tf.setDrawsBackground(false);
-    dialogWindow.addAccessoryView(tf);
-
-    
     var apiKeyTextBox = dialogWindow.viewAtIndex(0);
     
     dialogWindow.alert().window().setInitialFirstResponder(apiKeyTextBox);
@@ -378,3 +345,4 @@ Translator.prototype.createKeyWindow = function(context, title) {
     dialogWindow.setIcon(NSImage.alloc().initByReferencingFile(context.plugin.urlForResourceNamed("logo@2x.png").path()));
     return dialogWindow;
 }
+
