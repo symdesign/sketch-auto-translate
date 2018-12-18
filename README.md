@@ -1,5 +1,6 @@
 <img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="100" height="100" alt="Sketch Auto Translate Plugin">
   
+
 # Sketch Auto Translate Plugin
 Sketch Auto Translate is tested with the current [Sketch 52.2](https://www.sketchapp.com/). It is a plugin to translate Text Layers and Symbol Overrides. [Read more about its origin on medium.com](https://medium.com/sketch-app-sources/sketch-auto-translate-plugin-fd8f021faa30).
 
@@ -20,6 +21,10 @@ Sketch Auto Translate is tested with the current [Sketch 52.2](https://www.sketc
 <img width="160" height="auto" src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/cc-badge-powevered.png"/ >
 <!-- « Powered by -->
 </a>
+
+
+## Supported Languages
+Albanian, Arabic, Armenian, Azerbaijani, Bashkir, Belarusian, Bulgarian, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, Georgian, German, Greek, Hebrew, Hungarian, Italian, Kazakh, Latvian, Lithuanian, Macedonian, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish and Ukrainian.
 
 
 ## Translate Selection
