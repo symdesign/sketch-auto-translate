@@ -61,7 +61,7 @@ Be aware, both options require a Credit Card. [Check out their pricing](https://
 <strong>Too much hustle? Here you go: <a href="https://symdesign.github.io/sketch-auto-translate/">Use without API Key</a></strong>
 - - - -
    
-&nbsp;  
+Still eager? Then go to Google Cloud and follow these steps... 
 
 ### 1. Create a new Project
 To create your application’s API key please go to the [Cloud Platform Console](https://console.cloud.google.com/) and create a new project and give it a name you prefer.
