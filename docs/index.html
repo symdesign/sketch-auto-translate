@@ -37,42 +37,32 @@
             <hr>
 
             <label><input type="checkbox" onchange="toggleBuyButton()"> I have read and agree to License and Terms.</label>
-            <table>
-                <tr>
-                    <td>
-                        <label for="select-license">Please select your requirenment.</label>
-                        <select id="select-license" name="select-license" onchange="sketchAutoTranslateBuyButton(this.value)">
-                            <option value="0" selected="selected">Single User | € 4.99</option>
-                            <option value="1">5 Users | € 9.99</option>
-                            <option value="2">10 Users | € 14.99</option>
-                        </select><br />
-                        <button disabled id="buy-sketch-auto-translate">Buy now</button>
-                        <script>
-                            var buyButton = document.getElementById('buy-sketch-auto-translate'); 
 
-                            function toggleBuyButton() {
-                                buyButton.disabled = !buyButton.disabled;
-                            }
+            <label for="select-license">Please select your requirenment.</label>
+            <select id="select-license" name="select-license" onchange="sketchAutoTranslateBuyButton(this.value)">
+                <option value="0" selected="selected">Single User | € 4.99</option>
+                <option value="1">5 Users | € 9.99</option>
+                <option value="2">10 Users | € 14.99</option>
+            </select><br />
+            <button disabled id="buy-sketch-auto-translate">Buy now</button>
+            <script>
+                var buyButton = document.getElementById('buy-sketch-auto-translate'); 
 
-                            function sketchAutoTranslateBuyButton( number ) {
-                                var link = [];
-                                link[0] = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S";
-                                link[1] = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C";
-                                link[2] = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL";
+                function toggleBuyButton() {
+                    buyButton.disabled = !buyButton.disabled;
+                }
 
-                                buyButton.onclick = location.href=link[ parseInt(number) ];
-                            }
-                            sketchAutoTranslateBuyButton(0)
-                        </script>
-                    </td>
-                    <td>
-                        <li>
-                                <li><strong>No API key needed. <br /></strong><em>Just install and use. No sign-up, no nothing.</em></li>
-                                <li><strong>No recurring costs. <br /></strong><em>You’ll get a plugin which you can use as long as you like.</em></li>
-                        </li>
-                    </td>
-                </tr>
-            </table>
+                function sketchAutoTranslateBuyButton( number ) {
+                    var link = [];
+                    link[0] = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S";
+                    link[1] = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C";
+                    link[2] = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL";
+
+                    buyButton.onclick = location.href=link[ parseInt(number) ];
+                }
+                sketchAutoTranslateBuyButton(0)
+            </script>
+
    </div>
 </body>
 </html>
