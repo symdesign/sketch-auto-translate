@@ -58,7 +58,7 @@ There is also a Free Trial of $300 in credits which means, as long as you don't 
 Be aware, both options require a Credit Card. [Check out their pricing](https://cloud.google.com/translate/pricing) to find out how many Language Detections and Translations you can get.
 
 - - - -
-<strong>Too much hustle? See how to <a href="#use-without-api-key">Use without API Key</a></strong>
+<strong>Too much hustle? Here you go: <a href="https://symdesign.github.io/sketch-auto-translate/">Use without API Key</a></strong>
 - - - -
    
 &nbsp;  
@@ -79,18 +79,3 @@ Go to `API & Services > Credentials` again and click the button `Create credenti
 ### 4. Use API Key
 
 Copy your API Key, go back to Sketch and select `Plugins > Translate > Set Google API Key...` in the menu. After that you get prompted to paste your key.
-
-
-- - - -
-
-## Use without API Key
-Use Sketch Auto Translate without the hustle of setting up an API key. With a flat one-time payment to a young ambitious guy, you’ll get the exact same nice plugin without risking a bill at the end of the month.
-
-1. N**o API key needed.** Just install and use. No sign-up, no nothing.
-
-2. **No recurring or hidden costs.** You’ll get a plugin which you can use as long as you like.
-
-
-<a class="btn btn-primary" href="https://symdesign.github.io/sketch-auto-translate/"><strong>Sketch Auto Translate without API key</strong></a>
-
-
