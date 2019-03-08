@@ -79,17 +79,13 @@ Copy your API Key, go back to Sketch and select `Plugins > Translate > Set Googl
 - - - -
 
 ## Use without API Key
-I developed a solution which you can use without the hustle of setting up a key while fearing a bill at the end of the month. With a flat one-time payment to a young ambitious guy (me) you’ll get the exact same nice plugin — but with following extras:
+Use Sketch Auto Translate without the hustle of setting up an API key. With a flat one-time payment to a young ambitious guy, you’ll get the exact same nice plugin without risking a bill at the end of the month.
+
 1. N**o API key needed.** Just install and use. No sign-up, no nothing.
 
 2. **No recurring or hidden costs.** You’ll get a plugin which you can use as long as you like.
 
-  
-I will do my best to regularly push compatibility updates to both plugin versions, one and two. But without any further ado:
 
-
-|[Single User](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S)|[5 Users](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C)|[10 Users](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL)|
-|---|---|---|
-|€ 4.99|€ 9.99|€ 14.99|
+<a class="btn btn-primary" href="https://symdesign.github.io/sketch-auto-translate/"><strong></strong>Sketch Auto Translate without API key</strong></a>
 
 
