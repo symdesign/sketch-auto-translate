@@ -1,5 +1,5 @@
 {
     "schema_version": "2.0",
-    "manifest_path": "https://github.com/symdesign/sketch-auto-translate/raw/master/SketchAutoTranslate.sketchplugin/Contents/Sketch/manifest.json",
-    "appcast_path": "https://github.com/symdesign/sketch-auto-translate/raw/master/appcast.xml"
+    "manifest_path": "https://raw.githubusercontent.com/symdesign/sketch-auto-translate/master/SketchAutoTranslate.sketchplugin/Contents/Sketch/manifest.json",
+    "appcast_path": "https://raw.githubusercontent.com/symdesign/sketch-auto-translate/master/appcast.xml"
 }
