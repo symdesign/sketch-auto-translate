@@ -4,20 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello World</title>
+    <title>License Agreement</title>
+    <style>
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            width: 980px;
+        }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
 </head>
 <body class="markdown-body">
-    <h1>Hello World</h1>
-    <table>
-        <tr>
-            <th>A</th>
-            <th>B</th>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td>B</td>
-        </tr>
-    </table>
+    <div class="container">
+            <h1>License Agreement</h1>
+            <p>Allowed number of users of the plugin "Sketch Auto Translate Pro" is limited by your selection.</p>
+            <p>The duration of use is not limited.</p>
+
+            <h1>Terms of Purchase</h1>
+
+            <h2>Warranty</h2>
+            <p>With the purchase of the license, no claim to a permanent function of the plug-in "Sketch Auto Translate Pro" is acquired.</p>
+            <p>Although, I always strive to maintain the functionality of the plugin, I simply can not guarantee. This through dependencies on Sketch and Google.</p>
+
+            <h2>Revocation from purchase</h2>
+            <p>Except from subsequent conditions revocation is excluded according to § 312d Abs. 4 Nr. 1 BGB</p>
+            <p>You can revoke your purchase and get your payment back if:</p>
+            <ol>
+                <li>The language translation stops working without your own fault. After 3 month of purchase.</li>
+                <li>If you think there is a plausible reason for it. In this case, please contact me at <a href="mailto:hello@sym.design">hello@sym.design</a></li>
+            </ol>
+
+            <hr>
+            
+            <label><input type="checkbox" onchange="enableBuyButton()"> I have read and agree to License and Terms.</label>
+            <table>
+                <tr>
+                    <td>
+                        <label for="select-license">Please select your requirenment.</label>
+                        <select id="select-license" name="select-license" onchange="sketchAutoTranslateBuyButton(this.value)">
+                            <option value="0" selected="selected">Single User | € 4.99</option>
+                            <option value="1">5 Users | € 9.99</option>
+                            <option value="2">10 Users | € 14.99</option>
+                        </select><br />
+                        <button disabled="true" id="buy-sketch-auto-translate" class="btn btn--primary btn--small btn--buy-sketch-auto-translate"></button>Buy now
+                        <script>
+                            var buyButton = document.getElementById('buy-sketch-auto-translate'); 
+
+                            function enableBuyButton() {
+                                buyButton.disabled = false;
+                            }
+
+                            function sketchAutoTranslateBuyButton( number ) {
+                                var link = [];
+                                link[0] = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S";
+                                link[1] = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C";
+                                link[2] = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL";
+
+                                buyButton.onclick = this.location.href=link[ parseInt(number) ];
+                            }
+                            sketchAutoTranslateBuyButton(0)
+                        </script>
+                    </td>
+                    <td>
+                        <li>
+                                <li><strong>No API key needed. <br /></strong><em>Just install and use. No sign-up, no nothing.</em></li>
+                                <li><strong>No recurring costs. <br /></strong><em>You’ll get a plugin which you can use as long as you like.</em></li>
+                        </li>
+                    </td>
+                </tr>
+            </table>
+   </div>
 </body>
 </html>
