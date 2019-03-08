@@ -57,6 +57,8 @@ There is also a Free Trial of $300 in credits which means, as long as you don't 
 
 Be aware, both options require a Credit Card. [Check out their pricing](https://cloud.google.com/translate/pricing) to find out how many Language Detections and Translations you can get.
 
+<strong>Too much hustle? Checkout <a href="#use-without-api-key">next section</a></strong>
+
 
 ### 1. Create a new Project
 To create your application’s API key please go to the [Cloud Platform Console](https://console.cloud.google.com/) and create a new project and give it a name you prefer.
@@ -86,6 +88,6 @@ Use Sketch Auto Translate without the hustle of setting up an API key. With a fl
 2. **No recurring or hidden costs.** You’ll get a plugin which you can use as long as you like.
 
 
-<a class="btn btn-primary" href="https://symdesign.github.io/sketch-auto-translate/"><strong></strong>Sketch Auto Translate without API key</strong></a>
+<a class="btn btn-primary" href="https://symdesign.github.io/sketch-auto-translate/"><strong>Sketch Auto Translate without API key</strong></a>
 
 
