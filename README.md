@@ -57,9 +57,12 @@ There is also a Free Trial of $300 in credits which means, as long as you don't 
 
 Be aware, both options require a Credit Card. [Check out their pricing](https://cloud.google.com/translate/pricing) to find out how many Language Detections and Translations you can get.
 
+- - - -
 <strong>Too much hustle? See how to <a href="#use-without-api-key">Use without API Key</a></strong>
- 
- 
+- - - -
+   
+&nbsp;  
+
 ### 1. Create a new Project
 To create your application’s API key please go to the [Cloud Platform Console](https://console.cloud.google.com/) and create a new project and give it a name you prefer.
 
