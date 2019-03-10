@@ -12,14 +12,16 @@ Sketch Auto Translate is tested with the current [Sketch 52.2](https://www.sketc
 <br>
 <br>
 
+For this plugin to work, you need to setup a Google API key, find instructions below. <strong>Or use <a href="https://symdesign.github.io/sketch-auto-translate/">Sketch Auto Translate Pro</a></strong>.
+
 <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZK3TU55XHALSE">
-<!-- Donate Button » -->
+<!-- Donate Button »
 <img width="160" height="45" src="https://raw.githubusercontent.com/symdesign/sketch-auto-translate/master/Assets/donate-button.svg?sanitize=true" alt="Donate">
-<!-- « Donate Button -->
+« Donate Button -->
 <br>
-<!-- Powered by » -->
+<!-- Powered by »
 <img width="160" height="auto" src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/cc-badge-powevered.png"/ >
-<!-- « Powered by -->
+« Powered by -->
 </a>
 
 
@@ -51,18 +53,21 @@ Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
 
 
 ## Set Google API Key...
+
 To create a Google Translate API Key you need a paid account at [Google Cloud Platform](https://cloud.google.com). 
 
 There is also a Free Trial of $300 in credits which means, as long as you don't exceed that amount you won't have to pay anything. 
 
 Be aware, both options require a Credit Card. [Check out their pricing](https://cloud.google.com/translate/pricing) to find out how many Language Detections and Translations you can get.
 
-- - - -
-<strong>Too much hustle? Here you go: <a href="https://symdesign.github.io/sketch-auto-translate/">Use without API Key</a></strong>
-- - - -
-   
-Still eager? Then go to Google Cloud and follow these steps... 
+----
 
+<strong>Too much hustle? Here you go: <a href="https://symdesign.github.io/sketch-auto-translate/">Use without API Key</a></strong>
+
+----
+
+Still eager? Then go to Google Cloud and follow these steps... 
+  
 ### 1. Create a new Project
 To create your application’s API key please go to the [Cloud Platform Console](https://console.cloud.google.com/) and create a new project and give it a name you prefer.
 
