@@ -2,7 +2,7 @@
   
 
 # Sketch Auto Translate Plugin
-Sketch Auto Translate is tested with the current [Sketch 52.2](https://www.sketchapp.com/). It is a plugin to translate Text Layers and Symbol Overrides. [Read more about its origin on medium.com](https://medium.com/sketch-app-sources/sketch-auto-translate-plugin-fd8f021faa30).
+Sketch Auto Translate is tested with the current [Sketch 53.2](https://www.sketchapp.com/). It is a plugin to translate Text Layers and Symbol Overrides. [Read more about its origin on medium.com](https://medium.com/sketch-app-sources/sketch-auto-translate-plugin-fd8f021faa30).
 
 
 <a href="https://www.sketchpacks.com/symdesign/sketch-auto-translate/install">
