@@ -12,7 +12,9 @@ Sketch Auto Translate is tested with the current [Sketch 53.2](https://www.sketc
 <br>
 <br>
 
-For this plugin to work, you need to setup a Google API key, find instructions below. <strong>Or use <a href="https://symdesign.github.io/sketch-auto-translate/">Sketch Auto Translate Pro</a></strong>.
+For this plugin to work, you need to setup a Google API key, find instructions below. <strong>Or use <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Sketch Auto Translate Pro</a></strong>.
+
+
 
 <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZK3TU55XHALSE">
 <!-- Donate Button »
@@ -54,19 +56,35 @@ Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
 
 ## Set Google API Key...
 
-To create a Google Translate API Key you need a paid account at [Google Cloud Platform](https://cloud.google.com). 
+<strong style="line-height:35px; vertical-align:"><img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" style="vertical-align:bottom" width="40" height="40" alt="Sketch Auto Translate Plugin"> Sketch Auto Translate Pro</strong>
 
-There is also a Free Trial of $300 in credits which means, as long as you don't exceed that amount you won't have to pay anything. 
+|[Single User](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S)|[5 Users](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C)|[10 Users](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL)|
+|------|------|-------|
+|€ 4.99|€ 9.99|€ 14.99|
+
+
+1. **No API key needed.**
+<br>Just install and use. No sign-up, no nothing.
+  
+2. **No recurring or hidden costs.**
+<br>Use as long as you like.
+
+See all <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Terms of Purchase</a>.
+
+---
+
+
+To create your own Google Translate API Key you need a paid account at [Google Cloud Platform](https://cloud.google.com). There is also a Free Trial of $300 in credits which means, as long as you don't exceed that amount you won't have to pay anything. 
 
 Be aware, both options require a Credit Card. [Check out their pricing](https://cloud.google.com/translate/pricing) to find out how many Language Detections and Translations you can get.
 
-----
 
-<strong>Too much hustle? Here you go: <a href="https://symdesign.github.io/sketch-auto-translate/">Use without API Key</a></strong>
 
-----
 
-Still eager? Then go to Google Cloud and follow these steps... 
+
+
+
+
   
 ### 1. Create a new Project
 To create your application’s API key please go to the [Cloud Platform Console](https://console.cloud.google.com/) and create a new project and give it a name you prefer.

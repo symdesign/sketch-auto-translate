@@ -142,17 +142,20 @@
                     <option value="1">5 Users | € 9.99</option>
                     <option value="2">10 Users | € 14.99</option>
                 </select> 
-                <a data-disabled='true' class="btn btn-primary" id="buy-sketch-auto-translate">Checkout with PayPal</a>
+                <a data-disabled='false' class="btn btn-primary" id="buy-sketch-auto-translate">Checkout with PayPal</a>
             </p>
             
-            <p><label><input type="checkbox" onchange="toggleBuyButton(this)"> I accept the Terms of Purchase below.</label></p>
+            <!--<p><label><input type="checkbox" onchange="toggleBuyButton(this)"> I accept the Terms of Purchase below.</label></p>-->
 
             <script>
+
                 var buyButton = document.getElementById('buy-sketch-auto-translate'); 
 
+                /*
                 function toggleBuyButton(checkbox) {
                     buyButton.dataset.disabled = buyButton.dataset.disabled == 'true' && checkbox.checked ? 'false' : 'true';
                 }
+                */
 
                 function sketchAutoTranslateBuyButton( number ) {
                     var link = [];
@@ -167,29 +170,29 @@
 
             <p>&nbsp;</p>
 
-            <h2>Terms of Purchase</h2>
+<h2>Terms of Purchase</h2>
 
-            <h3>License Agreement</h3>
-            <p>Use the plugin as long as you like. Your license will not expire at any time. The license is only valid for the number of users selected.</p>
+<h3>License Agreement</h3>
+<p>Use the plugin as long as you like. Your license will not expire at any time. The license is only valid for the number of users selected.</p>
 
-            <h3>Warranty</h3>
-            <p>I always strive to maintain the functionality of the plugin. Due to the third parties Google and Bohemian Coding, I cannot not guarantee lifetime functioning of the plugin. With the purchase of the license, no claim to a permanent function of the plug-in "Sketch Auto Translate Pro" is acquired.</p>
+<h3>Warranty</h3>
+<p>I always strive to maintain the functionality of the plugin. Due to the third parties Google and Bohemian Coding, I cannot not guarantee lifetime functioning of the plugin. With the purchase of the license, no claim to a permanent function of the plug-in "Sketch Auto Translate Pro" is acquired.</p>
 
-            <h3>Revocation from purchase</h3>
-            <p>Except from subsequent conditions revocation is excluded according to <a href="https://www.gesetze-im-internet.de/bgb/__312g.html">§ 312g Abs. 4 Nr. 1 BGB</a></p>
-            <p>You can revoke your purchase and get your money back in case</p>
-            <ol type="a">
-                <li>the language translation stops working without your own fault within 3 month after your purchase.</li>
-                <li>you think there is a plausible reason for it. In this case, please contact me at <a href="mailto:hello@sym.design">hello@sym.design</a></li>
-            </ol>
+<h3>Revocation from purchase</h3>
+<p>Except from subsequent conditions revocation is excluded according to <a href="https://www.gesetze-im-internet.de/bgb/__312g.html">§ 312g Abs. 4 Nr. 1 BGB</a></p>
+<p>You can revoke your purchase and get your money back in case</p>
+<ol type="a">
+    <li>the language translation stops working without your own fault within 3 month after your purchase.</li>
+    <li>you think there is a plausible reason for it. In this case, please contact me at <a href="mailto:hello@sym.design">hello@sym.design</a></li>
+</ol>
 
-            <h2>Imprint</h2>
-            <p>
-                Friedrich Schulthei&szlig;<br>
-                Ehrenbergstra&szlig;e 7<br>
-                10245 Berlin
-            </p>
-            <p>&nbsp;</p>
+<h2>Imprint</h2>
+<p>
+    Friedrich Schulthei&szlig;<br>
+    Ehrenbergstra&szlig;e 7<br>
+    10245 Berlin
+</p>
+<p>&nbsp;</p>
    </div>
 </body>
 </html>
