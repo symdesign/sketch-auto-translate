@@ -56,7 +56,7 @@ Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
 
 ## Set Google API Key...
 
-<strong><img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="32" height="32" alt="Sketch Auto Translate Plugin">&nbsp; Sketch Auto Translate Pro</strong>
+<strong><img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="32" height="32" alt="Sketch Auto Translate Plugin">&nbsp;&nbsp;<sup>Sketch Auto Translate Pro</sup></strong>
 
 |[Single User](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S)|[5 Users](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C)|[10 Users](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL)|
 |------|------|-------|
