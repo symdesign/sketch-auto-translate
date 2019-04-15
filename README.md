@@ -14,9 +14,7 @@ Sketch Auto Translate is tested with the current [Sketch 53.2](https://www.sketc
 
 <br>
 <br>
-. | For this plugin to work, you need to setup a Google API key, find instructions below. <strong>Or use <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Sketch Auto Translate Pro</a></strong> | .
--- | --- | --
-.  |     | .
+For this plugin to work, you need to setup a Google API key, find instructions below. <strong>Or use <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Sketch Auto Translate Pro</a></strong>
 
 
 <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZK3TU55XHALSE">
