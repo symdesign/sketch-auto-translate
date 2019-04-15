@@ -1,13 +1,17 @@
 {
     "name": "Sketch Auto Translate",
-    "description": "Plugin to translate Sketch files into via Google Translate.",
+    "description": "Automated language translation of selected Layers, Symbol Overrides, Artboards or the Entire Document.",
     "author": "Friedrich Schultheiss",
     "email": "hello@sym.design",
     "homepage": "https://github.com/symdesign/sketch-auto-translate",
-    "appcast": "https://api.sketchpacks.com/v1/plugins/design.sym.sketch-auto-translate/appcast",
-    "version": "2.0",
+    "appcast": "https://raw.githubusercontent.com/symdesign/sketch-auto-translate/master/appcast.xml",
+    "updateURL": "https://github.com/symdesign/sketch-auto-translate/raw/master/Versions/SketchAutoTranslate.2.0.zip",
+    "downloadURL": "https://github.com/symdesign/sketch-auto-translate/raw/master/Versions/SketchAutoTranslate.2.0.zip",
+    "version": "2.0.0",
     "identifier": "design.sym.sketch-auto-translate",
+    "icon": "logo@2x.png",
     "compatibleVersion": "53.2",
+    "bundleVersion": "1",
     "menu": {
         "items": [
             "scriptSelection",
