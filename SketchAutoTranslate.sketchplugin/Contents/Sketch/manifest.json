@@ -7,7 +7,7 @@
     "appcast": "https://api.sketchpacks.com/v1/plugins/design.sym.sketch-auto-translate/appcast",
     "version": "2.0",
     "identifier": "design.sym.sketch-auto-translate",
-    "compatibleVersion": "52.2",
+    "compatibleVersion": "53.2",
     "menu": {
         "items": [
             "scriptSelection",
