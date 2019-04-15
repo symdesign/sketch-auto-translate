@@ -4,23 +4,19 @@
 # Sketch Auto Translate Plugin
 Sketch Auto Translate is tested with the current [Sketch 53.2](https://www.sketchapp.com/). It is a plugin to translate Text Layers and Symbol Overrides.
 
-
+<table>
+<tr>
+<td>
+For this plugin to work, you need to setup a Google API key, find instructions below. <br><strong>Or use <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Sketch Auto Translate Pro</a></strong>
+</td>
+</tr>
+</table>
 
 <a href="https://www.sketchpacks.com/symdesign/sketch-auto-translate/install">
   <img width="160" height="41" src="https://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png" >
 </a>
 <small><br>or <a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/symdesign/sketch-auto-translate/tree/master/SketchAutoTranslate.sketchplugin">Direct Download</a></small> 
 
-
-<br>
-<br>
-<table>
-<tr>
-<td>
-For this plugin to work, you need to setup a Google API key, find instructions below. <strong>Or use <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Sketch Auto Translate Pro</a></strong>
-</td>
-</tr>
-</table>
 
 <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZK3TU55XHALSE">
 <!-- Donate Button »
