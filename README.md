@@ -14,8 +14,13 @@ Sketch Auto Translate is tested with the current [Sketch 53.2](https://www.sketc
 
 <br>
 <br>
+<table>
+<tr>
+<td>
 For this plugin to work, you need to setup a Google API key, find instructions below. <strong>Or use <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Sketch Auto Translate Pro</a></strong>
-
+</td>
+</tr>
+</table>
 
 <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZK3TU55XHALSE">
 <!-- Donate Button »
@@ -61,9 +66,18 @@ Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
 
 To avoid the hussle of setting up an API key you can opt for the plugin's Pro version.
 
-|[Single User](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S)|[5 Users](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C)|[10 Users](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL)|
-|------|------|-------|
-|€ 4.99|€ 9.99|€ 14.99|
+<table>
+  <tr>
+    <th><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S">Single User</a></th>
+    <th><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C">5 Users</a></th>
+    <th><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL">10 Users</a></th>
+  </tr>
+  <tr>
+    <td>€ 4.99</td>
+    <td>€ 9.99</td>
+    <td>€ 14.99</td>
+  </tr>
+</table>
 
 
 1. **No API key needed.**
