@@ -58,6 +58,8 @@ Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
 
 ## Set Google API Key...
 
+<table><tr><td>
+
 ### <strong><img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="32" height="32" alt="Sketch Auto Translate Plugin">&nbsp;&nbsp;<sup>Sketch Auto Translate Pro</sup></strong>
 
 To avoid the hussle of setting up an API key you can opt for the plugin's Pro version.
@@ -84,29 +86,30 @@ To avoid the hussle of setting up an API key you can opt for the plugin's Pro ve
 
 See all [Terms of Purchase](https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key).
 
+</td></tr></table>
 
----
 
 
-To create your own Google Translate API Key you need a paid account at [Google Cloud Platform](https://cloud.google.com). But there is also a Free Trial option theat gives you $300 in credits which means, as long as you don't exceed that amount you won't have to pay anything. 
+To create a Google Translate API Key key yourself, you need a paid account at [Google Cloud Platform](https://cloud.google.com). 
+
+But there is also a free trial option theat gives you $300 in credits which means, as long as you don't exceed that amount you won't have to pay anything. 
 
 [Check out their pricing](https://cloud.google.com/translate/pricing) to find out how many Language Detections and Translations you can get. Bear in mind that for the trial, a Credit Card is still required. 
 
 
   
-### 1. Create a new Project
+#### 1. Create a new Project
 To create your application’s API key please go to the [Cloud Platform Console](https://console.cloud.google.com/) and create a new project and give it a name you prefer.
 
 
-### 2. Enable Google Cloud Translation API
+#### 2. Enable Google Cloud Translation API
 With the new project selected, go to `API & Services > Credentials`.
 At the Credentials page search for the *Google Cloud Translation API* and enable it.
 
 
-### 3. Create API Key
+#### 3. Create API Key
 Go to `API & Services > Credentials` again and click the button `Create credentials` inside the credentials card.
 
 
-### 4. Use API Key
-
+#### 4. Use API Key
 Copy your API Key, go back to Sketch and select `Plugins > Translate > Set Google API Key...` in the menu. After that you get prompted to paste your key.
