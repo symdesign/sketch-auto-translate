@@ -58,7 +58,9 @@ Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
 
 ## Set Google API Key...
 
-<hr>
+<table>
+<tr>
+<td>
 
 ## <strong><img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="32" height="32" alt="Sketch Auto Translate Plugin">&nbsp;&nbsp;<sup>Sketch Auto Translate Pro</sup></strong>
 
@@ -86,7 +88,10 @@ To avoid the hussle of setting up an API key you can opt for the plugin's Pro ve
 
 See all [Terms of Purchase](https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key).
 
-<hr>
+</td>
+</tr>
+</table>
+
 
 To create a Google Translate API Key key yourself, you need a paid account at [Google Cloud Platform](https://cloud.google.com). 
 
