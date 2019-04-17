@@ -7,7 +7,7 @@ Sketch Auto (Language) Translate is tested with the current [Sketch 53.2](https:
 <table>
 <tr>
 <td>
-For this plugin, you need to <a href="https://github.com/symdesign/sketch-auto-translate/#set-google-api-key">setup a Google API key</a> <strong>— or choose <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Sketch Auto Translate Pro</a> to avoid any setup.</strong>
+For this plugin, you need to <a href="#set-google-api-key">setup a Google API key</a> <strong>— or choose <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Sketch Auto Translate Pro</a> to avoid any setup.</strong>
 </td>
 </tr>
 </table>
@@ -89,7 +89,7 @@ See all <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-wit
 
 To create your own Google Translate API Key you need a paid account at [Google Cloud Platform](https://cloud.google.com). But there is also a Free Trial option theat gives you $300 in credits which means, as long as you don't exceed that amount you won't have to pay anything. 
 
-[Check out their pricing](https://cloud.google.com/translate/pricing) to find out how many Language Detections and Translations you can get. In any case a Credit Card is required. 
+[Check out their pricing](https://cloud.google.com/translate/pricing) to find out how many Language Detections and Translations you can get. Bear in mind that for the trial, a Credit Card is still required. 
 
 
   
