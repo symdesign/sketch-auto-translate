@@ -82,7 +82,8 @@ To avoid the hussle of setting up an API key you can opt for the plugin's Pro ve
 2. **No recurring or hidden costs.**
 <br>Use as long as you like.
 
-See all <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Terms of Purchase</a>.
+See all [Terms of Purchase](https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key).
+
 
 ---
 
