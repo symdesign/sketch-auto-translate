@@ -72,7 +72,7 @@ Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
   <tr>
     <td colspan="3">
     <br>
-    <strong><img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="32" height="32" alt="Sketch Auto Translate Plugin">&nbsp;&nbsp;<sup>Sketch Auto Translate Pro</sup></strong>
+    <strong><img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="40" height="40" alt="Sketch Auto Translate Plugin">&nbsp;&nbsp;<br>Sketch Auto Translate Pro</strong>
     <br><br>
     To save the time spent on setting up an API key you can opt for the plugin's Pro version.
     <br><br>
