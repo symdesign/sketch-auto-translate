@@ -2,12 +2,16 @@
   
 
 # Sketch Auto Translate Plugin
-Sketch Auto (Language) Translate is tested with the current [Sketch 53.2](https://www.sketchapp.com/). It is a plugin to translate Text Layers and Symbol Overrides.
+
+Save time when localising your digital designs. Sketch Auto Translate Plugin handles your language translations so you create multi-lingual apps within minutes instead of hours.
+
+The plugin will translate Text Layers and Symbol Overrides from and to any of the currently 40 supported languages based on your Selection, Current Page or the whole Document. 
+
 
 <table>
 <tr>
 <td>
-For this plugin, you need to <a href="#set-google-api-key">setup a Google API key</a> <strong>— or choose <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Sketch Auto Translate Pro</a> to avoid any setup.</strong>
+This plugin requires you to <a href="#set-google-api-key">setup a Google API key</a>. <strong>Or choose <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Sketch Auto Translate Pro</a> to plug-in and use without any setup.</strong>
 </td>
 </tr>
 </table>
@@ -16,6 +20,7 @@ For this plugin, you need to <a href="#set-google-api-key">setup a Google API ke
   <img width="160" height="41" src="https://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png" >
 </a>
 <small><br>or <a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/symdesign/sketch-auto-translate/tree/master/SketchAutoTranslate.sketchplugin">Direct Download</a></small> 
+
 
 
 <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZK3TU55XHALSE">
@@ -61,7 +66,7 @@ Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
 
 ### <strong><img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="32" height="32" alt="Sketch Auto Translate Plugin">&nbsp;&nbsp;<sup>Sketch Auto Translate Pro</sup></strong>
 
-To avoid the hussle of setting up an API key you can opt for the plugin's Pro version.
+To save the time spent on setting up an API key you can opt for the plugin's Pro version.
 
 <table>
   <tr>
