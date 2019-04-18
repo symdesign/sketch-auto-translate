@@ -64,34 +64,51 @@ Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
 ## Set Google API Key...
 
 
-### <strong><img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="32" height="32" alt="Sketch Auto Translate Plugin">&nbsp;&nbsp;<sup>Sketch Auto Translate Pro</sup></strong>
 
-To save the time spent on setting up an API key you can opt for the plugin's Pro version.
+
+
 
 <table>
+  <tr>
+    <td colspan="3">
+    <br>
+    <strong><img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="32" height="32" alt="Sketch Auto Translate Plugin">&nbsp;&nbsp;<sup>Sketch Auto Translate Pro</sup></strong>
+    <br><br>
+    To save the time spent on setting up an API key you can opt for the plugin's Pro version.
+    <br><br>
+    </td>
+  </tr>
   <tr>
     <th><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S">Single User</a></th>
     <th><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C">5 Users</a></th>
     <th><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL">10 Users</a></th>
   </tr>
   <tr>
-    <td>€ 4.99</td>
-    <td>€ 9.99</td>
-    <td>€ 14.99</td>
+    <th>€ 4.99</th>
+    <th>€ 9.99</th>
+    <th>€ 14.99</th>
+  </tr>
+  <tr>
+    <td colspan="3">
+    <br>
+    <ol>
+      <li>
+        <strong>No API key needed.</strong>
+        <br>Just install and use. No sign-up, no nothing.
+      </li>
+      <li>
+        <strong>No recurring or hidden costs</strong>
+        <br>Use as long as you like.
+      </li>
+    </ol>
+    <p><small>
+    See all <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Terms of Purchase</a>.</small>
+    </p>
+    </td>
   </tr>
 </table>
 
 
-1. **No API key needed.**
-<br>Just install and use. No sign-up, no nothing.
-  
-2. **No recurring or hidden costs.**
-<br>Use as long as you like.
-
-See all [Terms of Purchase](https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key).
-
-
----
 
 
 To create a Google Translate API Key key yourself, you need a paid account at [Google Cloud Platform](https://cloud.google.com). 
