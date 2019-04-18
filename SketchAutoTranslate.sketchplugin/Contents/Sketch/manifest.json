@@ -1,6 +1,6 @@
 {
     "name": "Sketch Auto Translate",
-    "description": "Save time when localising your digital designs. Sketch Auto Translate Plugin handles your language translations so you create multi-lingual apps within minutes instead of hours.\n\nThe plugin will translate Text Layers and Symbol Overrides from and to any of the currently 40 supported languages based on your Selection, Current Page or the whole Document.",
+    "description": "Save time when localising your digital designs. Sketch Auto Translate Plugin handles your language translations so you create multi-lingual apps within minutes instead of hours. The plugin will translate Text Layers and Symbol Overrides from and to any of the currently 40 supported languages based on your Selection, Current Page or the whole Document.",
     "author": "Friedrich Schultheiss",
     "email": "hello@sym.design",
     "homepage": "https://github.com/symdesign/sketch-auto-translate",
