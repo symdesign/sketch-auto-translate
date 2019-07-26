@@ -45,6 +45,7 @@ Translator.prototype.languageLabels = [
     'Swedish',
     'Turkish',
     'Ukrainian',
+    'Vietnamese',
   ];
   
   
@@ -91,6 +92,7 @@ Translator.prototype.languageLabels = [
     'sv',
     'tr',
     'uk',
+    'vi',
   ];
   
 
