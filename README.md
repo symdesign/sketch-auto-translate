@@ -11,7 +11,7 @@ The plugin will translate Text Layers and Symbol Overrides from and to any of th
 <table>
 <tr>
 <td>
-This plugin requires you to <a href="#set-google-api-key">setup a Google API key</a>. <strong>Or choose <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Sketch Auto Translate Pro</a> to plug-in and use without any setup.</strong>
+This plugin requires you to <a href="#set-google-api-key">setup a Google API key</a>. <strong>
 </td>
 </tr>
 </table>
@@ -62,54 +62,6 @@ Shortcut: `⇧` `⌘` `D` Translate Entire **D**ocument
 
 
 ## Set Google API Key...
-
-
-
-
-
-
-<table>
-  <tr>
-    <td colspan="3">
-    <br>
-    <strong><img src="https://github.com/symdesign/sketch-auto-translate/raw/master/Assets/logo%402x.png" width="40" height="40" alt="Sketch Auto Translate Plugin">&nbsp;&nbsp;<br>Sketch Auto Translate Pro</strong>
-    <br><br>
-    To save the time spent on setting up an API key you can opt for the plugin's Pro version.
-    <br><br>
-    </td>
-  </tr>
-  <tr>
-    <th><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=39WEAZNWYG37S">Single User</a></th>
-    <th><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUMWJJHLLJ3C">5 Users</a></th>
-    <th><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESE5ZGBXAN8EL">10 Users</a></th>
-  </tr>
-  <tr>
-    <th>€ 4.99</th>
-    <th>€ 9.99</th>
-    <th>€ 14.99</th>
-  </tr>
-  <tr>
-    <td colspan="3">
-    <br>
-    <ol>
-      <li>
-        <strong>No API key needed.</strong>
-        <br>Just install and use. No sign-up, no nothing.
-      </li>
-      <li>
-        <strong>No recurring or hidden costs</strong>
-        <br>Use as long as you like.
-      </li>
-    </ol>
-    <p><small>
-    See all <a href="https://github.com/symdesign/sketch-auto-translate/wiki/Use-without-API-Key">Terms of Purchase</a>.</small>
-    </p>
-    </td>
-  </tr>
-</table>
-
-
-
 
 To create a Google Translate API Key key yourself, you need a paid account at [Google Cloud Platform](https://cloud.google.com). 
 
