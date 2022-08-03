@@ -2,7 +2,7 @@
 var pluginIdentifier = "design.sym.sketch.translate";
 var app              = NSApplication.sharedApplication();
 var googleApiKey     = getOption('apiKey', '');
-var sketchVersion    = MSApplicationMetadata.metadata().appVersion;
+var sketchVersion    = BCSketchInfo.shared().metadata().appVersion;
 
 var fontSizeLarge = 13
 var fontSizeSmall = 11;
