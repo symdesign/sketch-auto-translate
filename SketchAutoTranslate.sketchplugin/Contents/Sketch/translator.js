@@ -180,7 +180,7 @@ Translator.prototype.translatePage = function (context) {
 
         artboard = artboards[i];
 
-        var sketchVersion = MSApplicationMetadata.metadata().appVersion;
+        var sketchVersion = BCSketchInfo.shared().metadata().appVersion;
         ( sketchVersion > 45) ? artboard.select_byExpandingSelection(true, false) : artboard.select_byExtendingSelection(true, false);
 
         var symbolInstances = selectLayersOfTypeInContainer(context.document, "MSSymbolInstance", artboard);
@@ -228,7 +228,7 @@ Translator.prototype.translateDocument = function (context) {
     
             artboard = artboards[i];
     
-            var sketchVersion = MSApplicationMetadata.metadata().appVersion;
+            var sketchVersion = BCSketchInfo.shared().metadata().appVersion;
             ( sketchVersion > 45) ? artboard.select_byExpandingSelection(true, false) : artboard.select_byExtendingSelection(true, false);
     
             var symbolInstances = selectLayersOfTypeInContainer(context.document, "MSSymbolInstance", artboard);
